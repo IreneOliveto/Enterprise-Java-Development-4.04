@@ -1,0 +1,14 @@
+Did you use the same type of route to update patient information and to update an employee department?
+No, I'used Patch to update a doctor’s department and Put to update patient’s information.
+
+
+Why did you choose the strategy that you chose?
+Because to update a doctor's department I don't need to access to all his information and modifying them, instead to change a patient information I have to access all his information.
+
+
+What are the pros and cons of the strategies you chose for creating these routes?
+The pros to use a Patch to modify a part of the entity's information is that it is more efficient.
+
+
+What are the tradeoffs between PUT and PATCH?
+With Put you can modify ALL the entity and it is not as much efficient as the patch, intead with the Patch you can modify just a part of the entity.
