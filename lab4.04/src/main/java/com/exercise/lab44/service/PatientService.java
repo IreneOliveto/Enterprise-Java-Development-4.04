@@ -7,9 +7,5 @@ import java.util.List;
 
 public interface PatientService {
 
-    List<Patient> patientList();
-
-    Patient getPatientById(int patientId);
-
     Patient save(Patient patient);
 }

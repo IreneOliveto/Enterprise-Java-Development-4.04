@@ -15,16 +15,6 @@ public class PatientServiceImp implements PatientService {
     PatientRepository patientRepository;
 
     @Override
-    public List<Patient> patientList() {
-        return patientRepository.findAll();
-    }
-
-    @Override
-    public Patient getPatientById(int patientId) {
-        return patientRepository.findById(patientId).get();
-    }
-
-    @Override
     public Patient save(Patient patient) {
         return patientRepository.save(patient);
     }
