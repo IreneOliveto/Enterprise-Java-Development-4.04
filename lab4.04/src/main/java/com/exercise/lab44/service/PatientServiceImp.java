@@ -5,6 +5,7 @@ import com.exercise.lab44.repository.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -22,7 +23,6 @@ public class PatientServiceImp implements PatientService {
     public Patient getPatientById(int patientId) {
         return patientRepository.findById(patientId).get();
     }
-
 
     @Override
     public Patient save(Patient patient) {

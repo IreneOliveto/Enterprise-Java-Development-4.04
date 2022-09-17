@@ -7,7 +7,6 @@ import com.exercise.lab44.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-
 @RestController
 public class EmployeeController {
 
@@ -22,14 +21,14 @@ public class EmployeeController {
 
     //Create a route to change a doctor’s status.
     @PatchMapping("/employee/{id}/status")
-    public Employee updateStatus(@PathVariable String id, @RequestBody EmployeeUpdateStatusDto storedStatus) {
-        return employeeService.updateEmployeeStatus(id, storedStatus.getStatus());
+    public Employee updateStatus(@PathVariable String id, @RequestBody EmployeeUpdateStatusDto status) {
+        return employeeService.updateEmployeeStatus(id, status);
     }
 
     //Create a route to update a doctor’s department.
     @PatchMapping("/employee/{id}/department")
-    public Employee updateDepartment(@PathVariable String id, @RequestBody EmployeeUpdateDepartmentDto storedDepartment) {
-        return employeeService.updateEmployeeDepartment(id, storedDepartment.getDepartment());
+    public Employee updateDepartment(@PathVariable String id, @RequestBody EmployeeUpdateDepartmentDto department) {
+        return employeeService.updateEmployeeDepartment(id, department);
     }
 
 

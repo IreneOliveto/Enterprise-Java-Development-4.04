@@ -21,7 +21,7 @@ public class Employee {
     @NotNull
     @Enumerated(STRING)
     @Column(nullable = false)
-    private EmployeeStatus employeeStatus;
+    private Status status;
 
     @OneToMany(mappedBy="admittedBy")
     @JsonIgnore
@@ -52,12 +52,12 @@ public class Employee {
         this.name = name;
     }
 
-    public EmployeeStatus getEmployeeStatus() {
-        return employeeStatus;
+    public Status getStatus() {
+        return status;
     }
 
-    public void setEmployeeStatus(EmployeeStatus status) {
-        this.employeeStatus = status;
+    public void setStatus(Status status) {
+        this.status = status;
     }
 
     public List<Patient> getPatientList() {
